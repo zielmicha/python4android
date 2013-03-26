@@ -28,6 +28,13 @@ extern void initsignal(void);
 extern void initposix(void);
 extern void initerrno(void);
 extern void initpwd(void);
+extern void inittime(void);
+extern void init_collections(void);
+extern void init_functools(void);
+extern void initselect(void);
+extern void initzlib(void);
+extern void initmath(void);
+extern void init_socket(void);
 extern void init_sre(void);
 extern void init_codecs(void);
 extern void initzipimport(void);
@@ -53,6 +60,13 @@ struct _inittab _PyImport_Inittab[] = {
 	{"zipimport", initzipimport},
 	{"_symtable", init_symtable},
 	{"xxsubtype", initxxsubtype},
+    {"_functools", init_functools},
+    {"_collections", init_collections},
+    {"_socket", init_socket},
+    {"select", initselect},
+    {"zlib", initzlib},
+    {"time", inittime},
+    {"math", initmath},
 
 /* -- ADDMODULE MARKER 2 -- */
 
