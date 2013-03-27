@@ -35,6 +35,10 @@ extern void initselect(void);
 extern void initzlib(void);
 extern void initmath(void);
 extern void init_socket(void);
+extern void initoperator(void);
+extern void inititertools(void);
+extern void initbinascii(void);
+extern void init_random(void);
 extern void init_sre(void);
 extern void init_codecs(void);
 extern void initzipimport(void);
@@ -67,6 +71,10 @@ struct _inittab _PyImport_Inittab[] = {
     {"zlib", initzlib},
     {"time", inittime},
     {"math", initmath},
+    {"itertools", inititertools},
+    {"operator", initoperator},
+    {"binascii", initbinascii},
+    {"_random", init_random},
 
 /* -- ADDMODULE MARKER 2 -- */
 
