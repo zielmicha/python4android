@@ -1,0 +1,6 @@
+Usage:
+
+    ./prepare.sh
+    cp -a build <your project directory>/jni/python
+
+ndk-build will build library libpython2.7.so together with few builtin modules. You need to provide standard library yourself and put it in PYTHONPATH.
