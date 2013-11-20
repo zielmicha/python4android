@@ -47,6 +47,7 @@ extern void initfcntl(void);
 extern void initzipimport(void);
 extern void init_symtable(void);
 extern void initxxsubtype(void);
+extern void initdatetime(void);
 
 /* -- ADDMODULE MARKER 1 -- */
 
@@ -81,6 +82,7 @@ struct _inittab _PyImport_Inittab[] = {
     {"binascii", initbinascii},
     {"fcntl", initfcntl},
     {"_random", init_random},
+    {"datetime", initdatetime},
 
 /* -- ADDMODULE MARKER 2 -- */
 
