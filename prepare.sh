@@ -1,6 +1,9 @@
 if [ ! -e Python-2.7 ]; then
-    wget http://www.python.org/ftp/python/2.7/Python-2.7.tar.bz2 -O Python-2.7.tar.bz2
-    tar xf Python-2.7.tar.bz2
+    V=''
+    COMPR=bz2
+    wget https://www.python.org/ftp/python/2.7$V/Python-2.7$V.tar.$COMPR -O Python-2.7.tar.$COMPR
+    tar xf Python-2.7.tar.$COMPR
+    mv Python-2.7$V Python-2.7
 fi
 rm -rf build
 mkdir build
