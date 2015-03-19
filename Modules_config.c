@@ -48,6 +48,8 @@ extern void initzipimport(void);
 extern void init_symtable(void);
 extern void initxxsubtype(void);
 extern void initdatetime(void);
+extern void init_weakref(void);
+extern void init_weakrefset(void);
 
 /* -- ADDMODULE MARKER 1 -- */
 
@@ -83,6 +85,7 @@ struct _inittab _PyImport_Inittab[] = {
     {"fcntl", initfcntl},
     {"_random", init_random},
     {"datetime", initdatetime},
+    {"_weakref", init_weakref},
 
 /* -- ADDMODULE MARKER 2 -- */
 
